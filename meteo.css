@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.btn{
+    border: none;
+    cursor: pointer;
+    padding: .75rem 1rem;
+    border-radius: .25rem;
+}
+
+.btn-search{
+    color: white;
+    background-color: #323232;
+    border: 2px solid #000000;
+}
+
+.btn-location{
+    color: white;
+    background-color: #9b9b9b;
+    border: 2px solid #000000;
+}
+
+.alert-error{
+    color: white;
+    background-color: #d02533;
+    padding: 1rem;
+}
+.page-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+
+}
+
+.sidebar{
+    background-image: linear-gradient(#ffffff61, #00000078);
+    padding: 1rem;
+    border-radius: .25rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.city-form{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.city-form label{
+    font-weight: 700;
+}
+
+#city{
+    background-color: #e3e3e3;
+}
+
+.color{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-weight: bold;
+} 
+
+.city-form input{
+    padding: .5rem;
+}
+
+.separator{
+    display: flex;
+    align-items: center;
+    gap: .5rem;   
+}
+
+.separator::before, .separator::after{
+    flex: 1;
+    content: ' ';
+    padding: .5px;
+    background-color: #000000;
+}
+
+.section-title{
+    margin-bottom: 1rem;
+}
+
+
+.weather-panel{
+    padding: 1rem;
+    border-radius: .25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.weather-panel img{
+    width: 80px;
+}
+
+.weather-panel .date{
+    font-weight: 700;
+}
+
+.weather-details{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.weather-panel.today{
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(#ffffff61, #00000078);
+
+
+}
+
+.weather-panel.forecast{
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(#ffffff61, #00000078);
+}
+
+.weather-items{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1rem;
+}
+
+
+.page-content{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+@media screen and (min-width: 760px) {
+    .page-container{
+        grid-template-columns: 360px 1fr;
+        height: 100%;
+    }
+}
+/* <!-- <div>
+<h2 class="section-title">Vremea in Brasov astazi</h2>
+<div class="weather-panel today">
+    <div class="weather-details">
+        <p class="date"> 2024-03-25, 18:00</p>
+        <p>Temperatura: 10.7°C</p>
+        <p>Vant: 9.8 kkm/h</p>
+        <p>Umiditate: 63%</p>
+    </div>
+    <div>
+        <img src="cloudy.svg" alt="weather icon">
+    </div>
+</div>
+</div>
+<div>
+<h2 class="section-title">Vremea in Brasov urmatoarele zile</h2>
+<div class="weather-items">
+    <div class="weather-panel forecast">
+        <div class="weather-details">
+            <p class="date"> 2024-03-25, 18:00</p>
+            <p>Temperatura: 10.7°C</p>
+            <p>Vant: 9.8 kkm/h</p>
+            <p>Umiditate: 63%</p>
+        </div>
+        <div>
+            <img src="cloudy.svg" alt="weather icon">
+        </div>
+    </div>
+    <div class="weather-panel forecast">
+        <div class="weather-details">
+            <p class="date"> 2024-03-25, 18:00</p>
+            <p>Temperatura: 10.7°C</p>
+            <p>Vant: 9.8 kkm/h</p>
+            <p>Umiditate: 63%</p>
+        </div>
+        <div>
+            <img src="cloudy.svg" alt="weather icon">
+        </div>
+    </div>
+    <div class="weather-panel forecast">
+        <div class="weather-details">
+            <p class="date"> 2024-03-25, 18:00</p>
+            <p>Temperatura: 10.7°C</p>
+            <p>Vant: 9.8 kkm/h</p>
+            <p>Umiditate: 63%</p>
+        </div>
+        <div>
+            <img src="cloudy.svg" alt="weather icon">
+        </div>
+    </div>
+    <div class="weather-panel forecast">
+        <div class="weather-details">
+            <p class="date"> 2024-03-25, 18:00</p>
+            <p>Temperatura: 10.7°C</p>
+            <p>Vant: 9.8 kkm/h</p>
+            <p>Umiditate: 63%</p>
+        </div>
+        <div>
+            <img src="cloudy.svg" alt="weather icon">
+        </div>
+    </div>
+</div>
+</div> --> */
